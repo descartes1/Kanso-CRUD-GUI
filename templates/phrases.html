@@ -1,0 +1,24 @@
+{! "two rows" layout, this is the left row !}
+<section id="in_content_left">
+
+	<h1>Phrases</h1>
+
+	<p><a href="{baseURL}/addphrase">Add new phrase</a></p>
+
+	{! Dust (http://akdubya.github.com/dustjs/) "looks up" if there are any rows passed by
+	(see lib/list.js -- "exports.phrases" and rewrite.js).
+	Otherwise it will display the else section, therefore "<p>No phrase found<p>" !}
+	{?rows}
+		<ul class="zebra">
+		{>"phrases_rows.html"/}
+		</ul>
+	{:else}
+		<p>No phrase found<p>
+	{/rows}
+
+</section>
+
+{! "two rows" layout, this is the right row !}
+<section id="in_content_right">
+	<p>Help</p>
+</section>

@@ -1,0 +1,46 @@
+This app will demonstrate how you could make use of styles, widgets, events and jquery within kanso (http://kansojs.org).
+
+In short: Give Kanso-CRUD some colors, more action and a nicer GUI.
+
+It is based on the minimalistic CRUD App that shows how operations on CouchDB are made with the Kanso Framework.
+You can find it on https://github.com/descartes1/Kanso-CRUD
+
+/* Short guide to make things running */
+
+0. Things you have should done before:
+- Installed CouchDB
+- Installed Kanso
+
+1. Go to https://github.com/descartes1/Kanso-CRUD-GUI
+
+2. Download the source to your PC
+
+3. Extract the archive you downloaded before
+
+4. You now should the a folder thats named something like "descartes1-Kanso-CRUD-GUI-XYZ123"
+
+5. Rename the folder to Kanso-CRUD-GUI
+
+Your folder structure should now looks like
+
+Kanso-CRUD-GUI (folder)
+|
+|-lib (folder)
+|-static (folder)
+|-templates (folder)
+|-kanso.json (file)
+|-README (file)
+
+6. Open a shell/termial
+
+7. "cd" into the Kanso-CRUD-GUI folder, eg. "cd ./Kanso-CRUD-GUI"
+
+8. Execute " kanso autopush http://yourdbuser:yourdbpass@localhost:5984/kcgui ".
+
+Make sure, that your user has admin rights.
+If you don't have a databaseuser yet, you're probably in "Admin Party"-mode. 
+See http://kansojs.org/guides/getting_started.html#users_and_permissions how to fix this.
+
+If there is no database named kcgui in couchdb, it will be generated for you by kanso.
+
+9. Go to http://localhost:5984/kcgui/_design/kcgui/_rewrite/ and enjoy.

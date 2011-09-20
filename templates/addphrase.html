@@ -1,0 +1,21 @@
+{! "two rows" layout, this is the left row !}
+<section id="in_content_left">
+
+	{! {form_title} is Dust-template placeholder (http://akdubya.github.com/dustjs/) and will be replaced with the form title. !}
+	<h1>{form_title}</h1>
+	
+	<form method="POST" action="">
+	  <table>
+		{! Dust-template placeholder (http://akdubya.github.com/dustjs/) for the form to display.
+		"|s" means "disable auto-escaping". !}
+	    {form|s}
+	  </table>
+	  <input type="submit" value="Addphrase" />
+	</form>
+
+</section>
+
+{! "two rows" layout, this is the right row !}
+<section id="in_content_right">
+	<p>Help</p>
+</section>

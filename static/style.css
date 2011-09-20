@@ -1,0 +1,80 @@
+/* jQueryUI demo page css */
+.demoHeaders { margin-top: 2em; }
+#accordion, #tabs, #icons, #slider, #progressbar {width: 50%;}
+#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+ul#icons {margin: 0; padding: 0;}
+ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+ul#icons span.ui-icon {float: left; margin: 0 4px;}
+
+/* "Zebra" for alternating colors in listings and changing colors when hovering */
+.zebra {
+list-style-type:none;
+margin:0;
+padding:0;
+}
+
+.zebra li {
+display:block;
+border-radius: 20px;
+-moz-border-radius: 20px;
+padding:1% 1% 1% 1%;
+}
+
+.zebra li:nth-child(odd) {
+background-color: #ADD8E6;
+}
+
+.zebra li a {
+text-decoration: none;
+display:block;
+color:blue;
+}
+
+.zebra li a:visited {
+color:red;
+}
+
+.zebra li:hover {
+background-color: #FFFDDD;
+}
+
+/* Basic Pagelayout */
+body {
+background-color: #FFFDDD;
+}
+
+#header, #nav, #in_content, #in_content_left, #in_content_right, #footer {
+padding: 1% 1% 1% 1%;
+display:block;
+border-radius: 20px;
+-moz-border-radius: 20px;
+}
+
+#header, #nav, #footer {
+background-color: #ADD8E6;
+margin: 1% 2% 1% 2%;
+border: 1px solid #ADD8E6;
+clear: left;
+}
+
+#in_content, #in_content_left, #in_content_right {
+background-color: #E6E6FA;
+border: 1px solid #E6E6FA;
+}
+
+#in_content {
+margin: 0% 2% 1% 2%;
+}
+
+#in_content_left {
+float:left;
+width: 66%;
+margin: 0% 0% 1% 2%;
+}
+
+#in_content_right {
+float:left;
+width: 25%;
+margin: 0% 0% 1% 1%;
+}

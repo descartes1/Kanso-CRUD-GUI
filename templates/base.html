@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	{! title Tag with Dust-template placeholder (http://akdubya.github.com/dustjs/) for the title to display.
+	See also "content" further down !}
+    <title>{title}</title> 
+
+	{! CSS !}
+	{! Here we put a link to our own css file that reside in the static folder !}
+    <link rel="stylesheet" type="text/css" href="{baseURL}/static/style.css" />
+	{! Here we put a link to jquery UI css files that reside in the static/js/jquery-ui-1.8.16 folder !}
+	<link rel="stylesheet" type="text/css" href="{baseURL}/static/js/jquery-ui-1.8.16/css/ui-lightness/jquery-ui-1.8.16.custom.css" />
+
+	{! Java Script. Note: position does matter - kanso should be linked as last script!}
+	{! Here we put the links to jquery and jquery UI files that reside in the static/js/jquery-ui-1.8.16 folder !}
+	<script type="text/javascript" src="{baseURL}/static/js/jquery-ui-1.8.16/js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="{baseURL}/static/js/jquery-ui-1.8.16/js/jquery-ui-1.8.16.custom.min.js"></script>
+	{! Here we put the links to JavaScript files that reside in the static/js folder !}
+    <script type="text/javascript" src="{baseURL}/static/js/json2.js"></script>
+    <script type="text/javascript" src="{baseURL}/kanso.js"></script>
+
+  </head> 
+  <body>
+	{! Here we have a HTML5 skeleton with header, navigation, content and footer. !}
+	<header id="header">HEADER</header>
+
+	<nav id="nav">
+		<a href="{baseURL}/">Startpage</a>&nbsp;
+		<a href="{baseURL}/phrases">List all phrases</a>&nbsp;
+		<a href="{baseURL}/jqueryui">jqueryUI Demo</a>&nbsp;
+		<a href="{baseURL}/login">Login</a>&nbsp;
+		<a href="{baseURL}/logout">Logout</a>&nbsp;
+	</nav>
+
+    <div id="content">
+
+		{!
+		Dust-template placeholder (http://akdubya.github.com/dustjs/) for the content to display.
+		"|s" means "disable auto-escaping".
+		Here the other templates (like start.html, login.html etc.) will be placed.
+
+			<- Snip from lib/shows.js ->
+
+				// Show the start page
+				exports.start = function (doc, req) {
+
+    			return {
+						title: 'Startpage',
+						content: templates.render('start.html', req, {})
+    					};
+				};
+
+			<- Snip end ->			
+			
+		So if the startpage is called, {title} above will be replaced by "Startpage" 
+		and {content|s} will be replaced by the start.html template-fragment.
+
+		If you have a look in start.html and phrases.html you will notice that there are
+		two kind of <section> usages within the "content".
+		
+		1st: <section id="in_content"> a "whole content in one section" layout
+		2nd: <section id="in_content_left"> and <section id="in_content_right"> a "two rows" layout
+		!}
+
+		{content|s}
+    </div>
+
+	<footer id="footer">FOOTER</footer>
+
+  </body>
+</html>
