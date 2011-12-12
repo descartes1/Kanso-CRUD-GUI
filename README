@@ -1,4 +1,4 @@
-This app will demonstrate how you could make use of styles, widgets, events and jquery within kanso (http://kansojs.org).
+This app will demonstrate how you could make use of styles, widgets, events and jquery within kanso (http://kan.so).
 
 In short: Give Kanso-CRUD some colors, more action and a nicer GUI.
 
@@ -35,12 +35,15 @@ Kanso-CRUD-GUI (folder)
 
 7. "cd" into the Kanso-CRUD-GUI folder, eg. "cd ./Kanso-CRUD-GUI"
 
-8. Execute " kanso autopush http://yourdbuser:yourdbpass@localhost:5984/kcgui ".
+8. Execute " kanso fetch "
+
+You now should have a additional folder "packages" in your Kanso-CRUD folder.
+
+9. Execute " kanso push http://yourdbuser:yourdbpass@localhost:5984/kcgui ".
 
 Make sure, that your user has admin rights.
-If you don't have a databaseuser yet, you're probably in "Admin Party"-mode. 
-See http://kansojs.org/guides/getting_started.html#users_and_permissions how to fix this.
+If you don't have a databaseuser yet, you're probably in "Admin Party"-mode.
 
 If there is no database named kcgui in couchdb, it will be generated for you by kanso.
 
-9. Go to http://localhost:5984/kcgui/_design/kcgui/_rewrite/ and enjoy.
+10. Go to http://localhost:5984/kcgui/_design/kcgui/_rewrite/ and enjoy.
