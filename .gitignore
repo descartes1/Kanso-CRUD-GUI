@@ -1,2 +1,4 @@
-packages
-/.kansorc
+.kansorc
+couchdb.stderr
+couchdb.stdout
+nohup.out

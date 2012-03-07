@@ -7,16 +7,17 @@
 	See also "content" further down !}
     <title>{title}</title> 
 
-	{! CSS !}
+	{! CSS !} 
 	{! Here we put a link to our own css file that reside in the static folder !}
     <link rel="stylesheet" type="text/css" href="{baseURL}/static/style.css" />
-	{! Here we put a link to jquery UI css files that reside in the static/js/jquery-ui-1.8.16 folder !}
-	<link rel="stylesheet" type="text/css" href="{baseURL}/static/js/jquery-ui-1.8.16/css/ui-lightness/jquery-ui-1.8.16.custom.css" />
 
+	{! Here we put a link to jquery UI css files that reside in the static/js/jquery-ui-1.8.18 folder !}
+	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/themes/ui-lightness/jquery-ui.css" />
 	{! Java Script. Note: position does matter - kanso should be linked as last script!}
-	{! Here we put the links to jquery and jquery UI files that reside in the static/js/jquery-ui-1.8.16 folder !}
-	<script type="text/javascript" src="{baseURL}/static/js/jquery-ui-1.8.16/js/jquery-1.6.2.min.js"></script>
-	<script type="text/javascript" src="{baseURL}/static/js/jquery-ui-1.8.16/js/jquery-ui-1.8.16.custom.min.js"></script>
+	{! Here we put the links to jquery and jquery UI files that reside in the static/js/jquery-ui-1.8.18 folder !}
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+	
 	{! Here we put the links to JavaScript files that reside in the static/js folder !}
     <script type="text/javascript" src="{baseURL}/static/js/json2.js"></script>
     {! Here are the Kanso javascript files that will run in the browser !}
